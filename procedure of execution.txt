@@ -1,0 +1,8 @@
+1. clone the repository using git.
+2. Then, download static.zip file from the link below
+3. extract the file and then cut/copy the folder present inside the extracted folder(folder name is again static).
+4. paste it in project folder where manage.py file is present.
+5. then launch a virtual environment and install dependencies.
+6. finally, run the project.
+
+static.zip url- https://drive.google.com/file/d/1wF_-w4wkZTjdk1ltuC6pEr6ENVVCjIfO/view?usp=sharing

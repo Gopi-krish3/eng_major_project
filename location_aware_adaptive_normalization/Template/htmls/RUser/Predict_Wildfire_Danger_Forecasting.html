@@ -1,0 +1,237 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 142px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style6 {color: #FF0000}
+.style8 {font-weight: bold}
+.style10 {color: #FFFF00}
+        .style12 {color: #FFFF00; font-weight: bold; }
+        .style13 {
+	color: #FFFF00;
+	font-weight: bold;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">PREDICT WILDFIRE DANGER FORECASTING TYPE!!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="1122" align="center">
+                                  <tr>
+                                    <td height="44" colspan="4" bgcolor="#FF0000"><div align="center" class="style13">ENTER ALL  ATTRIBUTE DETAILS HERE !!! </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="289" height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10"><br>
+                                    Enter UniqueId</span></strong></div></td>
+                                    <td width="240"><div align="center">
+                                      <input type="text" name="UniqueId">
+                                    </div></td>
+                                    <td width="319" bgcolor="#FF0000"><div align="center"><span class="style12">Enter AdminUnit</span></div></td>
+                                    <td width="254"><div align="center">
+                                      <input type="text" name="AdminUnit">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Enter CalFireIncident</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="CalFireIncident">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style12">Enter CanonicalUrl</span></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="CanonicalUrl">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Enter Counties</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Counties">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style12">Enter CrewsInvolved</span></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="CrewsInvolved">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Enter Dozers</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Dozers">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style12">Enter Engines</span></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Engines">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Enter Extinguished</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Extinguished">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style12">Enter Fatalities</span></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Fatalities">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Enter Featured</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Featured">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style12">Enter Final</span></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Final">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Enter Helicopters</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input name="Helicopters" type="text" value="">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style12">Enter Injuries</span></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Injuries">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Enter Latitude</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Latitude">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style12">Enter Location</span></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Location">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Enter Longitude</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Longitude">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style12">Enter MajorIncident</span></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="MajorIncident">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style12">Enter Name</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Name">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style12">Enter PercentContained</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="PercentContained">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style12">Enter PersonnelInvolved</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="PersonnelInvolved">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style12">Enter Description</div></td>
+                                    <td><div align="center">
+                                      <textarea name="Description"></textarea>
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style12">Enter Started </div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Started">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style12">Enter Status</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Status">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style12">Enter Updated</div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="Updated">
+                                    </div></td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FFFFFF"><div align="center"></div></td>
+                                    <td><div align="center"></div></td>
+                                    <td><input name="submit" type="submit" class="style1" value="Predict Wildfire Danger Forecasting"></td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                               <table height="50" border="5" align="center" bordercolor="#FF00FF">
+
+                    <tr><td width="456" bgcolor="#FFFF00"><div align="center"><strong><span class="style8 style6">WILDFIRE DANGER FORECASTING PREDICTION STATUS::</span></strong></div></td>
+                      <td width="339" bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">------{{objs}} ------ </div></td>
+
+                        </tr>
+
+
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

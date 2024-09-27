@@ -1,0 +1,136 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style7 {color: #FFFF00}
+        .style8 {color: #FFFF00; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">View All Wildfire Danger Forecasting Prediction Type !!! </p>
+                            <hr>
+                            <div class="tweettext">
+                                 <table border="5" bordercolor="#FF00FF">
+
+
+                                   <tr>
+
+                                    <td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">UniqueId	</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">AdminUnit</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">CalFireIncident</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">CanonicalUrl</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Counties</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">CrewsInvolved</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Dozers</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Engines</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Extinguished</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Fatalities</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Featured</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Final</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Helicopters</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Injuries</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Latitude</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Location</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Longitude</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">MajorIncident</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Name</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">PercentContained</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">PersonnelInvolved</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Description</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Started</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Status</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Updated</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style8"><span class="style7">Prediction</span></div></td>
+
+
+                      </tr>
+                            {% for object in objs %}
+                      <tr>
+
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.UniqueId}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.AdminUnit}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.CalFireIncident}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.CanonicalUrl}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Counties}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.CrewsInvolved}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Dozers}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Engines}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Extinguished}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Fatalities}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Featured}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Final}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Helicopters}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Injuries}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Latitude}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Location}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Longitude}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.MajorIncident}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Name}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.PercentContained}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.PersonnelInvolved}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Description}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Started}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Status}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Updated}}</div></td>
+                          <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Prediction}}</div></td>
+
+                        </tr>
+                                        {% endfor %}
+                      </table>
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
